@@ -1,2 +1,2 @@
 # my_pihole
-My Recursive DNS using Pi-hole
+My Recursive DNS server using Pi-hole
