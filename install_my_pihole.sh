@@ -3,6 +3,9 @@
 ## CONSTANTS
 
 ## FUNCTIONS
+# $1, string users first name
+# $2, string users last name
+
 function confirmName() {
   echo "So your full name is $1 $2?"
 }
