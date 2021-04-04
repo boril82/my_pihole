@@ -4,7 +4,7 @@
 
 ## FUNCTIONS
 function confirmName() {
-echo "So your full name is $1 $2?"
+  echo "So your full name is $1 $2?"
 }
 
 ## GLOBAL VARS
@@ -12,14 +12,12 @@ FIRST_NAME=""
 LAST_NAME=""
 
 ## LOGIC
-echo "What first name?";
+echo "What is first name?";
 read;
-FIRST_NAME=${REPLY}
+rememberFirstName $REPLY
 
-rememberFirstName $FIRST_NAME
-
-echo "What last name?";
+echo "What is last name?";
 read;
-LAST_NAME=${REPLY}
+rememberLastName $REPLY
 
-rememberLastName $LAST_NAME
+
