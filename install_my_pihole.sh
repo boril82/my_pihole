@@ -17,10 +17,8 @@ LAST_NAME=""
 ## LOGIC
 echo "What is first name?";
 read;
-rememberFirstName $REPLY
+FIRST_NAME=$REPLY
 
 echo "What is last name?";
 read;
-rememberLastName $REPLY
-
-
+LAST_NAME=$REPLY
