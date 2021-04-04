@@ -22,3 +22,5 @@ FIRST_NAME=$REPLY
 echo "What is last name?";
 read;
 LAST_NAME=$REPLY
+
+confirmName $FIRST_NAME $LAST_NAME
