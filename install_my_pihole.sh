@@ -68,5 +68,5 @@ confirmPassword $PASSWORD
 apt update && apt install -y sudo
 adduser $USER_NAME
 usermod -a -G sudo
-passwd $USER_NAME
-$PASSWORD
+
+echo "$USER_NAME:$PASSWORD" | chpasswd
