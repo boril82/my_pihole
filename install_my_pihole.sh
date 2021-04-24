@@ -3,11 +3,9 @@
 ## CONSTANTS
 
 ## FUNCTIONS
+
 # $1, string users first name
 # $2, string users last name
-# $3, string users username
-# $4, string users password
-
 function confirmName() {
   echo "So your full name is $1 $2, correct? [yes|no] (case senstive)";
   read CONFIRM; 
@@ -18,9 +16,9 @@ function confirmName() {
   fi;
 }
 
-
+# $1, string users username
 function confirmUser() {
-  echo "So your username will be $3, correct? [yes|no] (case senstive)";
+  echo "So your username will be $1, correct? [yes|no] (case senstive)";
   read CONFIRM; 
 
   if [[ $CONFIRM != "yes" ]]; then
@@ -29,8 +27,9 @@ function confirmUser() {
   fi;
 }
 
+# $1, string users password
 function confirmPassword() {
-  echo "So your password will be $4, correct? [yes|no] (case senstive)";
+  echo "So your password will be $1, correct? [yes|no] (case senstive)";
   read CONFIRM; 
 
   if [[ $CONFIRM != "yes" ]]; then
@@ -65,3 +64,9 @@ read;
 PASSWORD=$REPLY
 
 confirmPassword $PASSWORD
+
+apt update && apt install -y sudo
+adduser $USER_NAME
+usermod -a -G sudo
+passwd $USER_NAME
+$PASSWORD
